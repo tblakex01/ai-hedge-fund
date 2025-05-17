@@ -10,6 +10,7 @@ from tools.api import (
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
 from pydantic import BaseModel
+from typing import Any
 import json
 from typing_extensions import Literal
 from utils.progress import progress
@@ -520,7 +521,7 @@ def analyze_druckenmiller_valuation(financial_line_items: list, market_cap: floa
 
 def generate_druckenmiller_output(
     ticker: str,
-    analysis_data: dict[str, any],
+    analysis_data: dict[str, Any],
     model_name: str,
     model_provider: str,
 ) -> StanleyDruckenmillerSignal:

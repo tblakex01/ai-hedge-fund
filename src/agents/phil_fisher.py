@@ -9,6 +9,7 @@ from tools.api import (
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
 from pydantic import BaseModel
+from typing import Any
 import json
 from typing_extensions import Literal
 from utils.progress import progress
@@ -527,7 +528,7 @@ def analyze_sentiment(news_items: list) -> dict:
 
 def generate_fisher_output(
     ticker: str,
-    analysis_data: dict[str, any],
+    analysis_data: dict[str, Any],
     model_name: str,
     model_provider: str,
 ) -> PhilFisherSignal:

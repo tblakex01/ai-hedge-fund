@@ -4,6 +4,7 @@ from tools.api import get_financial_metrics, get_market_cap, search_line_items
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import HumanMessage
 from pydantic import BaseModel
+from typing import Any
 import json
 from typing_extensions import Literal
 from utils.progress import progress
@@ -421,7 +422,7 @@ def analyze_cathie_wood_valuation(financial_line_items: list, market_cap: float)
 
 def generate_cathie_wood_output(
     ticker: str,
-    analysis_data: dict[str, any],
+    analysis_data: dict[str, Any],
     model_name: str,
     model_provider: str,
 ) -> CathieWoodSignal:
