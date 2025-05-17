@@ -1,3 +1,4 @@
+from typing import Any
 from colorama import Fore, Style
 from tabulate import tabulate
 from .analysts import ANALYST_ORDER
@@ -323,7 +324,7 @@ def format_backtest_row(
     sharpe_ratio: float = None,
     sortino_ratio: float = None,
     max_drawdown: float = None,
-) -> list[any]:
+) -> list[Any]:
     """Format a row for the backtest results table"""
     # Color the action
     action_color = {
